@@ -1,0 +1,81 @@
+@font-face{
+  src: url("/assets/Ubuntu.ttf");
+  font-family: "Ubuntu";
+}
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/Lora.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+  user-select: none;
+}
+body {
+    background-image: url('/assets/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center; 
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: "Lora";
+    backdrop-filter: blur(4px);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1; 
+}
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+}
+.title{
+  font-family: "Ubuntu";
+}
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 0 1 calc(50% - 10px);
+  min-width: 0; 
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+.name{
+  color: lightblue;
+  text-shadow: 0 0 20px aliceblue;
+  animation: makeAnim 1.8s alternate-reverse infinite;
+}
+@keyframes makeAnim{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(180deg);
+  }
+}
+a{
+  color: white;
+  font-family: "Lora";
+  text-decoration: none;
+}
