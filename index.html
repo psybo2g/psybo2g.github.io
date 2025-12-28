@@ -9,6 +9,13 @@
 </head>
 
 <body>
+<button onclick="dropDowner();" class="menu-opener"><img width="40px" height="40px" src="/assets/menu.svg"></button>
+<div id="drop" class="drop-down">
+    <h1 class="title">My Work</h1>
+    <h3 class="sub-category">Learning Projects: </h3>
+    <a href="https://psybo2g.github.io/tic-tac-toe-web" class="option">Tic-Tac-Toe</a>
+    <a href="https://psybo2g.github.io/schulte-table" class="option">Schulte-Table</a>
+</div>
 <div class="content">
 <img style="border-radius: 50%;" height="100px" src="/assets/logo.jpg">
 <h1 class="title">Hi, it's <span class="name">Psybo2g!</span></h1>
@@ -22,42 +29,52 @@ I mostly work with HTML, CSS, and JavaScript, and I’ve dabbled in Lua (Löve2D
 If you like what I’m creating, feel free to follow along on my socials below. I’d love to connect!
 </p>
 <div class="board">
-<div class="card">
+<div class="card redcard">
   <img height="50px" src="/assets/youtube.svg"><br>
 <a href="https://youtube.com/@psybo2g?si=hhEsu0exBBhqIdwS">Watch my devlogs on YouTube</a>
 </div>
-<div class="card">
+<div class="card redcard">
   <img height="50px" src="/assets/reddit.svg"><br>
 <a href="https://www.reddit.com/u/psybo2g/s/LjhmB2Licg">Join the discussion on Reddit</a>
 </div>
-<div class="card">
+<div class="card graycard">
 <img height="50px" src="/assets/twitter.svg"><br>
 <a href="https://x.com/psybo2g">See quick updates on X</a>
 </div>
-<div class="card">
+<div class="card coralcard">
   <img height="50px" src="/assets/itchio-logo-textless-white.svg"><br>
 <a href="https://psybo2g.itch.io/">Play my games on itch.io</a>
 </div>
-<div class="card">
+<div class="card purplecard">
   <img height="50px" src="/assets/discord.svg"><br>
-<a href="">Chat with me on Discord</a>
+<a href="https://discord.gg/CvC7fzWp">Chat with me on Discord</a>
 </div>
-<div class="card">
+<div class="card blackcard">
   <img height="50px" src="/assets/github.svg"><br>
 <a href="https://github.com/psybo2g">Browse my code on GitHub</a>
 </div>
-<div class="card">
+<div class="card redcard">
   <img height="50px" src="/assets/google.svg"><br>
 <a href="mailto:psybo2g@gmail.com">Say hello via Email</a>
 </div>
-<div class="card">
+<div class="card greencard">
   <img height="50px" src="/assets/whatsapp.svg"><br>
   <a href="https://whatsapp.com/channel/0029VbCJGG9L2ATyIFBgr41G">Check out my WhatsApp Channel</a>
 </div>
 </div>
 
 </div>
-<script src="/main.js"></script>
+<script type="text/javascript">
+function dropDowner() {
+  var dropElement = document.getElementById('drop');
+  
+  if (dropElement.style.height === '0px' || dropElement.style.height === '') {
+    dropElement.style.height = dropElement.scrollHeight + 'px';
+  } else {
+    dropElement.style.height = '0px';
+  }
+}
+</script>
 </body>
 
-</html>
+  </html>
