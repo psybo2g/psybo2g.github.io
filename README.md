@@ -1,6 +1,6 @@
 # About Me
 
-This is the source code for my personal website, which hosts links to my projects like my Tic-Tac-Toe and Schulte Table mini-games.
+This is the source code for my personal website, which hosts links to my projects.
 
 [Link to Live Site](https://psybo2g.github.io)
 
